@@ -562,10 +562,6 @@ video {
   display: flex;
 }
 
-.list-item {
-  display: list-item;
-}
-
 .justify-center {
   justify-content: center;
 }
