@@ -1,6 +1,6 @@
-import type { LoaderFunction } from "@remix-run/node";
+import type { ActionFunction, LoaderFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
-import { useLoaderData } from "@remix-run/react";
+import { Form, useLoaderData } from "@remix-run/react";
 import type { User } from "@prisma/client";
 
 import { db } from "~/utils/db.server";
@@ -16,6 +16,16 @@ export const loader: LoaderFunction = async () => {
   return json(data);
 };
 
+export const action: ActionFunction = async ({ request }) => {
+  const data = Object.fromEntries(await request.formData()) as {
+    email: string;
+    password: string;
+  };
+
+  await db.user.create({ data });
+  return null;
+};
+
 export default function Index() {
   const data = useLoaderData<LoaderData>();
 
@@ -28,6 +38,13 @@ export default function Index() {
           <li key={user.id}>{user.email}</li>
         ))}
       </ul>
+
+      <Form method="post">
+        <input type="email" name="email" placeholder="email" />
+        <input type="password" name="password" placeholder="password" />
+
+        <button type="submit">Add user</button>
+      </Form>
     </div>
   );
 }
