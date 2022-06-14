@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@babel/preset-react': ^7.17.12
   '@netlify/functions': ^1.0.0
+  '@prisma/client': 3.15.1
   '@remix-run/dev': ^1.5.1
   '@remix-run/eslint-config': ^1.5.1
   '@remix-run/netlify': ^1.5.1
@@ -13,6 +14,7 @@ specifiers:
   cross-env: ^7.0.3
   eslint: ^8.15.0
   npm-run-all: ^4.1.5
+  prisma: ^3.15.1
   react: ^17.0.2
   react-dom: ^17.0.2
   tailwindcss: ^3.1.2
@@ -24,11 +26,13 @@ dependencies:
   '@remix-run/node': 1.5.1_sfoxds7t5ydpegc3knd667wn6m
   '@remix-run/react': 1.5.1_sfoxds7t5ydpegc3knd667wn6m
   cross-env: 7.0.3
+  prisma: 3.15.1
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
 
 devDependencies:
   '@babel/preset-react': 7.17.12
+  '@prisma/client': 3.15.1_prisma@3.15.1
   '@remix-run/dev': 1.5.1_sfoxds7t5ydpegc3knd667wn6m
   '@remix-run/eslint-config': 1.5.1_g7pwd4svbmf37pkrcole3potlu
   '@types/react': 17.0.45
@@ -794,6 +798,28 @@ packages:
     dependencies:
       json-parse-even-better-errors: 2.3.1
     dev: true
+
+  /@prisma/client/3.15.1_prisma@3.15.1:
+    resolution: {integrity: sha512-Lsk7oupvO9g99mrIs07iE6BIMouHs46Yq/YY8itTsUQNKfecsPuZvVYvcKci0pqRQ0neOpvIvoA/ouZmIMBCrQ==}
+    engines: {node: '>=12.6'}
+    requiresBuild: true
+    peerDependencies:
+      prisma: '*'
+    peerDependenciesMeta:
+      prisma:
+        optional: true
+    dependencies:
+      '@prisma/engines-version': 3.15.1-1.461d6a05159055555eb7dfb337c9fb271cbd4d7e
+      prisma: 3.15.1
+    dev: true
+
+  /@prisma/engines-version/3.15.1-1.461d6a05159055555eb7dfb337c9fb271cbd4d7e:
+    resolution: {integrity: sha512-e3k2Vd606efd1ZYy2NQKkT4C/pn31nehyLhVug6To/q8JT8FpiMrDy7zmm3KLF0L98NOQQcutaVtAPhzKhzn9w==}
+    dev: true
+
+  /@prisma/engines/3.15.1-1.461d6a05159055555eb7dfb337c9fb271cbd4d7e:
+    resolution: {integrity: sha512-NHlojO1DFTsSi3FtEleL9QWXeSF/UjhCW0fgpi7bumnNZ4wj/eQ+BJJ5n2pgoOliTOGv9nX2qXvmHap7rJMNmg==}
+    requiresBuild: true
 
   /@remix-run/dev/1.5.1_sfoxds7t5ydpegc3knd667wn6m:
     resolution: {integrity: sha512-ioOlBnsesOpXSMEf1g28zfcrD6ZVWi55tWDWkWMnTXi+N7HwisMi4Okh1RDxoH86Px0jvNgvUeMHQpnxUZOmRw==}
@@ -5327,6 +5353,14 @@ packages:
     dependencies:
       parse-ms: 2.1.0
     dev: true
+
+  /prisma/3.15.1:
+    resolution: {integrity: sha512-MLO3JUGJpe5+EVisA/i47+zlyF8Ug0ivvGYG4B9oSXQcPiUHB1ccmnpxqR7o0Up5SQgmxkBiEU//HgR6UuIKOw==}
+    engines: {node: '>=12.6'}
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      '@prisma/engines': 3.15.1-1.461d6a05159055555eb7dfb337c9fb271cbd4d7e
 
   /process-nextick-args/2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}

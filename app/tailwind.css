@@ -562,12 +562,28 @@ video {
   display: flex;
 }
 
+.list-disc {
+  list-style-type: disc;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
 .justify-center {
   justify-content: center;
 }
 
 .p-4 {
   padding: 1rem;
+}
+
+.pl-4 {
+  padding-left: 1rem;
 }
 
 .text-2xl {
